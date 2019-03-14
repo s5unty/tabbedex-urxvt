@@ -1,5 +1,10 @@
 Perl script to support tab on urxvt.
 
+###prefer
+
+1. make the index starting from ONE, not ZERO.
+2. quick switch tabs with shortcuts CTRL+1..0.
+
 ###Install
 To install clone the repository:
 
