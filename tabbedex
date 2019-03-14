@@ -641,6 +641,20 @@ sub tab_key_press {
             $self->move_tab($tab, $keysym - 0xff52);
             return 1;
         }
+        elsif ($keysym > 0x2f and $keysym < 0x40) {
+            # make ctrl+1...0 switch to proper tab
+            my $num = $keysym - 0x30;
+            if ($num == 0) {
+                $num = 10;
+            }
+            $num--;
+
+            if ($#{$self->{tabs}} >= $num){
+                $self->make_current ($self->{tabs}[$num]);
+            }
+
+            return 1;
+        }
     }
 
     ();
