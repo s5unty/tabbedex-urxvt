@@ -212,7 +212,7 @@ sub refresh {
         push @ends, $len;
     }
 
-    $idx = 0;
+    $idx = 1;
     for my $tab (@{ $self->{tabs} }) {
         if ($idx >= $tabs_to_skip) {
             my $name = substr($tab->{name} ? $tab->{name} : $idx, -$max_len);
